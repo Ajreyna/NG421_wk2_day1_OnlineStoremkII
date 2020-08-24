@@ -14,7 +14,7 @@ https://blackrockdigital.github.io/startbootstrap-shop-homepage/
 ## Part 1 - Building Components
 ### The components
  * Organize this web page into appropriate components
-   * ProductDetail
+   *  
    * Header
    * Footer
    * Carousel
@@ -24,7 +24,7 @@ https://blackrockdigital.github.io/startbootstrap-shop-homepage/
 * We should be familiar with this process from a previous project
 
 ### app.component.html 
-* Cut out the entire `<div id="root">` div from index.html and put it in `app.component.html`.
+* Cut out the entire ` div from index.html and put it in `app.component.html`.
 * Make sure not to remove `<app-root></app-root>` from index.html.
 * Nothing will show up until you complete this step.
 
@@ -44,6 +44,7 @@ https://blackrockdigital.github.io/startbootstrap-shop-homepage/
 ```
 * Use this interface where appropriate
 
+
 ### TypeScript
 * Apply types to appropriate places: argument types, function return types, class property types
 * Import and use the Product interface where needed
@@ -58,12 +59,15 @@ https://blackrockdigital.github.io/startbootstrap-shop-homepage/
 * Create a method for `addToCart` that takes an argument product of type `Product` and pushes it to the shopping cart array
 * Make sure to import the service and add to the providers array in `app.module.ts`. The generator might not do this.
 
+# completed 8/23/2020
+
 ### app.component.ts
 * Create a property called products of type `Array<Product>`
 * Implement a constructor and `ngOnInit`
 * Implement dependency injection to get the `ProductService` into a property called `productService`
 * In `ngOnInit` call `this.productService.getProducts` and assign it into the `products` property.
 
+# completed 8/23/2020 1:41pm
 
 ### ProductDetail
 * The ProductDetail should repesent only one single product.
@@ -73,6 +77,9 @@ https://blackrockdigital.github.io/startbootstrap-shop-homepage/
 * Make the star images represent the number rating from data. (You might have to research how to do this).
 * Bonus. Notice the grey stars. `<span class="glyphicon glyphicon-star-empty"></span>`
 
+# ngIf to make stars show up dynamically
+
+# completed except for extra credit 8/24/2020 1:41pm
 
 ### Header
 * The Header component should have a property `shoppingCart` that is an array of Product.
@@ -95,12 +102,15 @@ https://blackrockdigital.github.io/startbootstrap-shop-homepage/
 * Handle the clicking of the button with event binding
 * When the button is clicked it should emit the event sending in the product object
 
+# completed 8/24/2020
+
 ### app.component.ts
 * Add an event handler method called `productWasAdded` that takes one argument, `product` of type `Product`
 * In this method call `addToCart` on the productService sending in the product.
+# completed 8/24/2020
 
 ### app.component.html 
-* Apply event binding on `<app-product-detail>` for the `productAdded` event. The handler method should be `productWasAdded`
+* Apply event binding on `<app-product-detail>` for the `productAdded` event. The handler method should be `productWasAdded`  
 * Don't forget `$event`
 
 ### Does it work
